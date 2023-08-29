@@ -21,9 +21,9 @@ export class CardBox extends Component {
     render() {
         const {data} = this.state;
         return (
-            <section className={`container-fluid border align-items-center pt-3`}>
+            <section className={`container-fluid  align-items-center pt-3`}>
                 {data ? (
-                        <div className={`container-fluid border m-1 d-flex flex-wrap`} style={{}}>
+                        <div className={`container-fluid  m-1 d-flex flex-wrap`} style={{}}>
                         {data['todos'].map(x =>
                             <DiskCard name={x.todo}/>)
                         }

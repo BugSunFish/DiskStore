@@ -11,7 +11,7 @@ export class Header extends Component {
                  style={{height: `5em`}}>
                 <img src={Logo} alt={`лого`}
                      style={{padding: 0, margin: 0, imageRendering: `pixelated`, height: `3em`}}/>
-                <a style={{cursor: `pointer`}} className={`fw-bold text-decoration-none text-body fs-4`}>Sing in\up</a>
+                <button style={{cursor: `pointer`}} data-bs-toggle="modal" data-bs-target="#exampleModal" className={`fw-bold border-0 bg-body text-decoration-none text-body fs-4`}>Sing in\up</button>
                 <a style={{cursor: `pointer`}} className={`fw-bold text-decoration-none text-body fs-4`}>Cart</a>
                 <a style={{cursor: `pointer`}} className={`fw-bold text-decoration-none text-body fs-4`}>Help</a>
                 <a style={{cursor: `pointer`}} className={`fw-bold text-decoration-none text-body fs-4`}>Contacts</a>

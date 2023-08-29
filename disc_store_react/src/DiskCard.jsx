@@ -51,7 +51,7 @@ export class DiskCard extends Component {
                                  zIndex: 0,
                                  paddingLeft: 2,
                                  marginBottom: `-0.95em`
-                             }}>{this.state.track.price}$
+                             }}>{this.state.track.price}$ 
                         </div>
                     </div>
                 </div>

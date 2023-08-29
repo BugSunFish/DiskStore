@@ -1,10 +1,9 @@
-/* Error: Undefined variable.
+/* Error: Can't find stylesheet to import.
  *   ,
- * 7 |   --#{$prefix}accordion-color: #{$accordion-color};
- *   |       ^^^^^^^
+ * 1 | @import "../node_modules/bootstrap/scss/accordion";
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *   '
- *   ..\node_modules\bootstrap\scss\_accordion.scss 7:7  @import
- *   styles.scss 1:9                                     root stylesheet */
+ *   styles.scss 1:9  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 7 \2502    --#{$prefix}accordion-color: #{$accordion-color};\a   \2502        ^^^^^^^\a   \2575 \a   ..\\node_modules\\bootstrap\\scss\\_accordion.scss 7:7  @import\a   styles.scss 1:9                                     root stylesheet";
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"../node_modules/bootstrap/scss/accordion\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   styles.scss 1:9  root stylesheet";
 }

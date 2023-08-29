@@ -13,6 +13,14 @@ namespace DiskStoreAPI
             // Add services to the container.
             builder.Services.AddDbContext<DataDbContext>(options
                 => options.UseSqlServer(builder.Configuration.GetConnectionString("con")));
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -28,6 +36,8 @@ namespace DiskStoreAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

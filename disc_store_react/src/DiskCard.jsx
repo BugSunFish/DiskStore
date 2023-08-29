@@ -5,7 +5,7 @@ export class DiskCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: props.name,
+            track: props.track,
         }
     }
 
@@ -51,11 +51,11 @@ export class DiskCard extends Component {
                                  zIndex: 0,
                                  paddingLeft: 2,
                                  marginBottom: `-0.95em`
-                             }}>{this.getRandomInt(100)}.{this.getRandomInt(100)}$
+                             }}>{this.state.track.price}$
                         </div>
                     </div>
                 </div>
-                <h3>{this.state.name[0]}</h3>
+                <h3>{this.state.track.name}</h3>
             </div>
         )
     }

@@ -11,7 +11,7 @@ export class CardBox extends Component {
     }
 
     componentDidMount() {
-        fetch('https://dummyjson.com/todos')
+        fetch('https://localhost:44304/api/Tracks')
             .then(res => res.json())
             .then(data => {
                 this.setState({data});
@@ -24,8 +24,8 @@ export class CardBox extends Component {
             <section className={`container-fluid  align-items-center pt-3`}>
                 {data ? (
                         <div className={`container-fluid  m-1 d-flex flex-wrap`} style={{}}>
-                        {data['todos'].map(x =>
-                            <DiskCard name={x.todo}/>)
+                        {data.map(x =>
+                            <DiskCard track={x}/>)
                         }
                     </div>
                 ) : (
